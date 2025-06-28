@@ -10,3 +10,5 @@ scipy
 fpdf
 xlrd
 openpyxl
+matplotlib
+scipy
