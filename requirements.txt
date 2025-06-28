@@ -1,0 +1,15 @@
+yaml
+scipy
+plotly
+streamlit
+pandas
+sklearn
+os
+fpdf
+networkx
+numpy
+scipy
+xarray
+re
+uuid
+xlrd

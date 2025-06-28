@@ -1,0 +1,21 @@
+variables:
+  - tas      # Surface temp
+  - tasmax
+  - tasmin
+  - cdd
+  - cwd
+  - pr
+  - r20mm
+  - spei12
+  - gsl
+  - hd35
+
+metadata:
+  country: "IND"
+  period: "1995-2014"
+  scenario: "historical"
+  statistic: "mean"
+  product: "climatology"
+  collection: "cmip6-x0.25"
+  aggregation: "annual"
+  percentile: "median"

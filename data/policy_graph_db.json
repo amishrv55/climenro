@@ -1,0 +1,38 @@
+[
+  {
+    "Policy Node": "Replace ICE vehicle with EV",
+    "Core Intent": "Replace ICE vehicle with EV",
+    "Sector": "Road Transport",
+    "Dept": "General",
+    "Beneficiary": "Public",
+    "Influencer": "General Influencers",
+    "Alignment": "Positive",
+    "Impact": -702720.0,
+    "Country": "India",
+    "Graph": "New EV Policy"
+  },
+  {
+    "Policy Node": "Construct 1 km 4-lane highway",
+    "Core Intent": "Construct 1 km 4-lane highway",
+    "Sector": "Infrastructure",
+    "Dept": "General",
+    "Beneficiary": "Public",
+    "Influencer": "General Influencers",
+    "Alignment": "Negative",
+    "Impact": 80000.0,
+    "Country": "India",
+    "Graph": "Infrastructure Policy"
+  },
+  {
+    "Policy Node": "Construct 1 km 4-lane highway",
+    "Core Intent": "Construct 1 km 4-lane highway",
+    "Sector": "Infrastructure",
+    "Dept": "General",
+    "Beneficiary": "Public",
+    "Influencer": "General Influencers",
+    "Alignment": "Negative",
+    "Impact": 80000.0,
+    "Country": "India",
+    "Graph": "Net Zero 2030"
+  }
+]

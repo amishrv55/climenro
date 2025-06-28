@@ -1,0 +1,16 @@
+﻿Activity Class,Sector,Unit,CO₂e Impact,Impact Type,Source,Confidence,Keywords,Required Input Type,Default Unit Cost,Uses Displacement,Displacement Default,Instrument Type
+Replace ICE vehicle with EV,Road Transport,per vehicle/year,–1.6 tons,Mitigation,"IEA, ICCT",Medium,"EV, electric vehicle, e-mobility, zero emission vehicle, battery vehicle",budget,5000,TRUE,0.6,subsidy
+Construct 1 km 4-lane highway,Infrastructure,per km,"+20,000 tons (embedded)",Emission,OECD InfraCarbon,Medium,"highway, road construction, 4-lane road, infrastructure project",length_km,,FALSE,,infrastructure
+Add 1 GW Solar replacing Coal,Electricity,per GW/year,–1.3 Mt/year,Mitigation,"IEA, IPCC",High,"solar, solar power, photovoltaic, renewable electricity, solar panel",capacity_gw,,FALSE,,energy transition
+Build 1 MTPA cement plant,Cement,per MTPA,+0.8 Mt/year,Emission,"GNR, IPCC",High,"cement plant, clinker, cement production, limestone burning",capacity_mtpa,,FALSE,,expansion
+Implement CCS in cement,Cement,per MTPA,–0.6 Mt/year,Mitigation,IPCC SRCCS,Medium,"CCS, carbon capture, cement CCS, carbon storage, CO2 capture",capacity_mtpa,,FALSE,,technology upgrade
+Convert 1 hectare to forest,Land Use,per hectare/year,–4.8 tons,Mitigation,IPCC,Medium,"afforestation, reforestation, tree planting, green cover, forest restoration",area_ha,,FALSE,,land use
+Enteric fermentation reduction,Animal Husbandry,per cow/year,–0.3 tons,Mitigation,"FAO, IPCC",Low,"enteric fermentation, cattle methane, livestock emissions, dairy methane",number_cows,,FALSE,,livestock reform
+Replace diesel irrigation pump with solar,Agriculture,per pump/year,–0.5 tons,Mitigation,MNRE India,Medium,"solar pump, irrigation pump replacement, renewable agriculture, solar irrigation",number_pumps,,FALSE,,renewable switch
+Divert 1 ton of solid waste from landfill to compost,Waste,per ton,–0.75 tons,Mitigation,USEPA,Medium,"composting, organic waste diversion, waste treatment, bio-waste, recycle",tons_waste,,FALSE,,waste reform
+Electrify 1 passenger km of rail,Transport,per km/year,–0.1 kg/km,Mitigation,UIC,Medium,"rail electrification, train electric, passenger train, electric rail",km_passenger,,FALSE,,infrastructure
+Reduce methane from wastewater (tech upgrade),Wastewater,per treatment plant/yr,–1.5 kt,Mitigation,UNFCCC CDM,Low,"wastewater, effluent treatment, STP, sludge methane",number_plants,,FALSE,,technology upgrade
+Fuel switch: coal → natural gas,Energy,per MWh,–0.45 tons,Mitigation,IPCC,High,"fuel switch, natural gas, gas over coal, cleaner fuel, gasification",mwh,,FALSE,,fuel switch
+Aviation biofuel substitution,Aviation,per 1000 L,–2.0 tons,Mitigation,ICAO,Low,"aviation biofuel, sustainable jet fuel, alternative aviation fuel",liters_fuel,,FALSE,,biofuel mandate
+Replace LPG with solar cookstove,Household Energy,per stove/year,–0.5 tons,Mitigation,Clean Cooking Alliance,Medium,"solar cookstove, clean cooking, LPG replacement, solar cooker",budget,100,TRUE,0.7,subsidy
+Green building standards (per building),Construction,per building/year,–3.2 tons,Mitigation,UNEP,Medium,"green building, energy-efficient building, building codes, LEED, BEE ratings",number_buildings,,FALSE,,regulation
