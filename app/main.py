@@ -18,7 +18,7 @@ local_css("styles.css")
 # --- HEADER ---
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.image("App/static/tre.png", width=160)
+    st.image("static/tre.png", width=160)
 with col2:
     st.markdown("<h1 class='header-main'>Climenro</h1>", unsafe_allow_html=True)
     st.markdown("<h4 class='header-sub'>Climate Policy Intelligence Platform</h4>", unsafe_allow_html=True)
