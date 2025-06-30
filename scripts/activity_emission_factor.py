@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 def load_activity_table(path='data/activity_emission_factor.csv'):
     df = pd.read_csv(path, encoding='utf-8')
@@ -81,7 +82,7 @@ def estimate_units(policy_row, user_input, country_row=None):
         return user_input
 
 def estimate_emission_impact(policy_row, user_input, country_row=None):
-    emission_per_unit = parse_emission_value(policy_row.get('CO₂e Impact', ''))
+    emission_per_unit = parse_impact_to_float(policy_row.get('CO₂e Impact', ''))
     if emission_per_unit is None:
         return None
 
@@ -166,3 +167,12 @@ def get_efficiency_score(country, df_country):
     if not row.empty:
         return float(row.iloc[0]['Efficiency'])
     return 0.5
+
+def parse_impact_to_float(impact_str):
+    try:
+        # Replace en-dash with minus, remove commas and units
+        clean = impact_str.replace("–", "-").replace(",", "")
+        number_part = re.findall(r"-?\d+\.?\d*", clean)
+        return float(number_part[0]) if number_part else 0.0
+    except Exception:
+        return 0.0
