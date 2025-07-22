@@ -24,7 +24,7 @@ from activity_emission_factor import (
     estimate_emission_impact,
     get_activity_row,
     get_displacement_ratio,
-    build_policy_node
+    build_policy_node,
 )
 
 # Streamlit config

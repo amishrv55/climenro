@@ -302,5 +302,27 @@
     "Graph Intent": "Net Zero 2030",
     "Display Name": "XYZ (2025-06-22)",
     "Original Text": "EV vehicles, vehicles, EV cars, Subsidy"
+  },
+  {
+    "Policy Node": "Cabinet approves Pune Metro Rail Project Phase-2: ",
+    "Core Intent": "Replace ICE vehicle with EV",
+    "Sector": "Transport",
+    "Dept": "Ministry of Transport",
+    "CO\u2082 Impact (Mt \u00b1)": -0.96,
+    "Impact Factor": -0.96,
+    "Alignment": "Positive",
+    "Instrument": "subsidy",
+    "Start\u2013End": "2025\u20132030",
+    "Beneficiary": "Urban Citizens",
+    "Influencer": "UNEP, EV Lobbies",
+    "Efficiency": 0.65,
+    "Node Size": 100,
+    "Node Color": "green",
+    "Policy Title": "Cabinet approves Pune Metro Rail Project Phase-2: Vanaz to Chandani Chowk (Corridor 2A) & Ramwadi to Wagholi/Vitthalwadi (Corridor 2B), extension of the Existing Pune Metro Phase\u2013I (Vanaz-Ramwadi)",
+    "Country": "India",
+    "Date": "2025-06-29",
+    "Graph Intent": "Net Zero 2030",
+    "Display Name": "Cabinet approves Pune Metro Rail Project Phase-2: Vanaz to Chandani Chowk (Corridor 2A) & Ramwadi to Wagholi/Vitthalwadi (Corridor 2B), extension of the Existing Pune Metro Phase\u2013I (Vanaz-Ramwadi) (2025-06-29)",
+    "Original Text": "The Union Cabinet chaired by Prime Minister, Shri Narendra Modi has approved the Pune Metro Rail Project Phase-2: Vanaz to Chandani Chowk (Corridor 2A) and Ramwadi to Wagholi/Vitthalwadi (Corridor 2B), as extensions of the existing Vanaz\u2013Ramwadi corridor under Phase-1. These two elevated corridors will span 12.75 km and include 13 stations, connecting fast-developing suburbs such as Chandani Chowk, Bavdhan, Kothrud, Kharadi, and Wagholi. The project is scheduled for completion within four years.\n\n The estimated project cost is Rs.3626.24 crore, to be equally shared by the Government of India, Government of Maharashtra, and external bilateral/multilateral agencies. This strategic proposal is a logical extension of the existing Corridor-2 and aligns with the Comprehensive Mobility Plan (CMP), which envisions a continuous Chandani Chowk to Wagholi Metro corridor to strengthen East\u2013West mass transit in Pune.\n\n These extensions will serve key IT hubs, commercial areas, educational institutions, and residential pockets, increasing the share of public transport and ridership across the network. The new corridors will also integrate at the District Court Interchange Station with Line-1 (Nigdi\u2013Katraj) and Line-3 (Hinjewadi\u2013District Court) to enable seamless multimodal urban travel.\n\n Under long-term mobility planning, intercity bus services from cities like Mumbai and Bengaluru will be integrated at Chandani Chowk, while those from Ahilya Nagar and Chhatrapati Sambhaji Nagar will connect at Wagholi, allowing passengers to easily access Pune\u2019s Metro system. These extensions will also help decongest arterial routes such as Paud Road and Nagar Road, offering safe, fast, and eco-friendly mobility options. \n\nAfter completion of these corridors, the projected incremental daily ridership for the entire Line 2 is estimated at 0.96 lakh in 2027, 2.01 lakh in 2037, 2.87 lakh in 2047, and 3.49 lakh in 2057. The project will be implemented by Maharashtra Metro Rail Corporation Limited (Maha-Metro), which will execute all civil, electro-mechanical, and related works. Pre-construction activities such as topographical survey and detailed design consultancy have already commenced. \n\nThis strategic expansion is poised to unlock Pune\u2019s economic potential, enhance its urban transport infrastructure, and contribute significantly to sustainable and inclusive development across the metropolitan region."
   }
 ]

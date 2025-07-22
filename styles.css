@@ -142,6 +142,15 @@ body {
     color: #080000;
 }
 
+/* Bold and color for header menu items (manual styling trick) */
+[data-testid="stSidebar"] ul li:nth-child(1) button {
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    color: #004d40 !important;
+    cursor: default !important;
+}
+
+
 /* Sidebar styles */
 .sidebar-header {
     margin-bottom: 1rem;

@@ -15,25 +15,30 @@ def local_css(file_name):
 
 local_css("styles.css")
 
+
 # --- HEADER ---
 col1, col2 = st.columns([1, 5])
 with col1:
     st.image("app/static/logo_climenro.jpg", width=260)
 with col2:
-    st.markdown("<h1 class='header-main'>Climenro</h1>", unsafe_allow_html=True)
-    st.markdown("<h4 class='header-sub'>Climate Policy Intelligence Platform</h4>", unsafe_allow_html=True)
+    st.markdown("<h2 class='header-main'>Climenro - A Climate Policy Intelligence Platform</h2>", unsafe_allow_html=True)
+    #st.markdown("<h4 class='header-sub'>Climate Policy Intelligence Platform</h4>", unsafe_allow_html=True)
 
 # --- HORIZONTAL FILTER BAR ---
-st.markdown("<hr class='thin-line'/>", unsafe_allow_html=True)
-filter_col1, filter_col2, filter_col3 = st.columns([2, 2, 1])
-with filter_col1:
-    selected_country = st.selectbox("🌍 Country", ["IND", "USA", "CHN", "BRA", "ZAF", "DEU"])
-with filter_col2:
-    selected_year = st.selectbox("📅 Year", [2025, 2024, 2023, 2022, 2021])
-with filter_col3:
-    if st.button("🔄 Reset"):
-        selected_country = "IND"
-        selected_year = 2023
+st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; border: 1px solid #dcdcdc;">
+    <h2 style="color: #003366;">👈 Pre-Beta Version Notice</h2>
+    <p><strong>This is a Pre-Beta release</strong> of our platform. It may have a few rough edges — and that's where <strong>your feedback</strong> matters the most! Help us shape it into the perfect tool for you.</p>
+
+    <h3 style="color: #004080;">📌 How to Use the Platform</h3>
+    <ul>
+        <li>Use the <strong>sidebar menu</strong> 👈 on the left to navigate between different modules.</li>
+        <li>Each module contains <strong>structured data</strong> and <strong>interactive visualizations</strong> to help you explore policy insights at a glance.</li>
+    </ul>
+
+    <p>We aim to offer a <strong>clear, concise, and insightful</strong> experience for exploring climate policies.</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("<hr class='thin-line'/>", unsafe_allow_html=True)
 
