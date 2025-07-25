@@ -5,7 +5,8 @@ from PIL import Image
 st.set_page_config(
     page_title="Climenro – Climate Policy Intelligence",
     layout="wide",
-    page_icon="🌍"
+    page_icon="🌍",
+    initial_sidebar_state="expanded"
 )
 
 # --- LOAD CUSTOM CSS ---
@@ -15,132 +16,186 @@ def local_css(file_name):
 
 local_css("styles.css")
 
-
 # --- HEADER ---
-col1, col2 = st.columns([1, 5])
-with col1:
-    st.image("app/static/logo_climenro.jpg", width=260)
-with col2:
-    st.markdown("<h2 class='header-main'>Climenro - A Climate Policy Intelligence Platform</h2>", unsafe_allow_html=True)
-    #st.markdown("<h4 class='header-sub'>Climate Policy Intelligence Platform</h4>", unsafe_allow_html=True)
+header_container = st.container()
+with header_container:
+    col1, col2 = st.columns([1, 5])
+    with col1:
+        st.image("app/static/logo_climenro.jpg", width=260)
+    with col2:
+        st.markdown("<h1 class='header-main'>Climenro</h1>", unsafe_allow_html=True)
+        st.markdown("<div class='header-sub'>Climate Policy Intelligence Platform</div>", unsafe_allow_html=True)
 
-# --- HORIZONTAL FILTER BAR ---
-st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; border: 1px solid #dcdcdc;">
-    <h2 style="color: #003366;">👈 Pre-Beta Version Notice</h2>
-    <p><strong>This is a Pre-Beta release</strong> of our platform. It may have a few rough edges — and that's where <strong>your feedback</strong> matters the most! Help us shape it into the perfect tool for you.</p>
-
-    <h3 style="color: #004080;">📌 How to Use the Platform</h3>
-    <ul>
-        <li>Use the <strong>sidebar menu</strong> 👈 on the left to navigate between different modules.</li>
-        <li>Each module contains <strong>structured data</strong> and <strong>interactive visualizations</strong> to help you explore policy insights at a glance.</li>
-    </ul>
-
-    <p>We aim to offer a <strong>clear, concise, and insightful</strong> experience for exploring climate policies.</p>
+# --- NOTICE BAR ---
+with st.container():
+    st.markdown("""
+    <div class="notice-bar">
+        <div class="notice-icon">🚧</div>
+        <div class="notice-content">
+            <strong>Pre-Beta Release:</strong> Help us improve by sharing your feedback. 
+            Use the sidebar 👈 to navigate between modules.
+        </div>
     </div>
     """, unsafe_allow_html=True)
-
-st.markdown("<hr class='thin-line'/>", unsafe_allow_html=True)
 
 # --- HERO SECTION ---
-st.markdown("""
-<div class="hero">
-    <h3>Making climate policy transparent, fast, and evidence-based</h3>
-    <p>Climenro is an AI-powered policy simulation and analysis platform built on real-world climate and economic data from NASA, IEA, EDGAR, OWID, and World Bank.</p>
-    <p>We serve cities, nations, NGOs, and consultancies with tools that simplify climate action planning, policy design, and emissions forecasting.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# --- QUICKSTART GUIDE ---
-with st.expander("ℹ️ How to Use Climenro"):
+hero = st.container()
+with hero:
     st.markdown("""
-    1. **Select a Module** from the sidebar (e.g., country insights, emissions trends, or policy simulators).
-    2. **Choose a Country** and timeframe using the top filter.
-    3. **Interact** with visualizations, scenario tools, or policy analyzers.
-    4. **Download reports** using the Report Generator module.
-    """)
+    <div class="hero-container">
+        <div class="hero-content">
+            <h2>Making climate policy transparent, fast, and evidence-based</h2>
+            <p class="hero-description">Climenro is an AI-powered policy simulation platform built on real-world climate and economic data from NASA, IEA, EDGAR, OWID, and World Bank.</p>
+            <div class="hero-features">
+                <div class="feature-pill">🌍 Cities & Nations</div>
+                <div class="feature-pill">📊 Policy Design Tools</div>
+                <div class="feature-pill">📈 Emissions Forecasting</div>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <div class="globe-animation"></div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- PLATFORM STATS ---
-st.markdown("### 🔢 Platform Stats")
-metric_col1, metric_col2, metric_col3, metric_col4 = st.columns(4)
-with metric_col1:
-    st.markdown("""<div class="metric-card"><div class="metric-title">🌡️ Global Warming</div><div class="metric-value">+0.21°C/decade</div><div class="metric-caption">NASA GISTEMP</div></div>""", unsafe_allow_html=True)
-with metric_col2:
-    st.markdown("""<div class="metric-card"><div class="metric-title">🌍 Countries Analyzed</div><div class="metric-value">190+</div><div class="metric-caption">EDGAR + World Bank</div></div>""", unsafe_allow_html=True)
-with metric_col3:
-    st.markdown("""<div class="metric-card"><div class="metric-title">📘 Policies Vectorized</div><div class="metric-value">600+</div><div class="metric-caption">Carbon pricing, ETS, etc.</div></div>""", unsafe_allow_html=True)
-with metric_col4:
-    st.markdown("""<div class="metric-card"><div class="metric-title">📊 Datasets Used</div><div class="metric-value">20+</div><div class="metric-caption">Multi-source integrated</div></div>""", unsafe_allow_html=True)
+metrics = st.container()
+with metrics:
+    st.markdown("### Platform Intelligence")
+    metric_cols = st.columns(4)
+    stats = [
+        {"title": "Global Warming", "value": "+0.21°C/decade", "caption": "NASA GISTEMP"},
+        {"title": "Countries Analyzed", "value": "190+", "caption": "EDGAR + World Bank"},
+        {"title": "Policies Vectorized", "value": "600+", "caption": "Carbon pricing, ETS"},
+        {"title": "Datasets Integrated", "value": "20+", "caption": "Multi-source analysis"}
+    ]
+    
+    for i, stat in enumerate(stats):
+        with metric_cols[i]:
+            st.markdown(f"""
+            <div class="metric-card">
+                <div class="metric-title">{stat['title']}</div>
+                <div class="metric-value">{stat['value']}</div>
+                <div class="metric-caption">{stat['caption']}</div>
+            </div>
+            """, unsafe_allow_html=True)
 
 # --- MODULE TABS ---
-st.markdown("### 🧭 Explore Modules")
-tab1, tab2, tab3, tab4 = st.tabs([
-    "🌍 Country & Global Insights", 
-    "📈 Emission & Energy Trends", 
-    "🏛️ Policy Intelligence", 
-    "📊 MACC, Co-benefits & Reporting"
-])
+tabs_container = st.container()
+with tabs_container:
+    st.markdown("### Explore Capabilities")
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "Country Insights", 
+        "Emission Trends", 
+        "Policy Intelligence", 
+        "Reporting"
+    ])
 
-with tab1:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>Country & Global Analysis</h4>
-        <p>Explore top emitters, sectoral breakdowns, displacement scores, warming linkage, and GDP correlations for 190+ countries.</p>
-        <p><b>Modules:</b> 1 to 10</p>
-    </div>
-    """, unsafe_allow_html=True)
+    with tab1:
+        st.markdown("""
+        <div class="feature-card">
+            <div class="card-icon">🌍</div>
+            <h4>Country & Global Analysis</h4>
+            <p>Explore top emitters, sectoral breakdowns, displacement scores, warming linkage, and GDP correlations.</p>
+            <div class="card-footer">
+                <span class="module-count">Modules 1-10</span>
+                <button class="card-button">Explore</button>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
-with tab2:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>Energy & Emissions Trends</h4>
-        <p>Visualize historical data, renewable growth, fossil displacement, and identify lag or lead patterns.</p>
-        <p><b>Modules:</b> 5 to 9</p>
-    </div>
-    """, unsafe_allow_html=True)
+    with tab2:
+        st.markdown("""
+        <div class="feature-card">
+            <div class="card-icon">📈</div>
+            <h4>Energy & Emissions Trends</h4>
+            <p>Visualize historical data, renewable growth, fossil displacement, and identify lag or lead patterns.</p>
+            <div class="card-footer">
+                <span class="module-count">Modules 5-9</span>
+                <button class="card-button">Explore</button>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
-with tab3:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>Policy Tools & Simulations</h4>
-        <p>Analyze policy effectiveness, simulate future outcomes, calculate economic costs, and create policy vectors with clustering.</p>
-        <p><b>Modules:</b> 11 to 21</p>
-    </div>
-    """, unsafe_allow_html=True)
+    with tab3:
+        st.markdown("""
+        <div class="feature-card">
+            <div class="card-icon">🏛️</div>
+            <h4>Policy Tools & Simulations</h4>
+            <p>Analyze policy effectiveness, simulate future outcomes, calculate economic costs, and create policy vectors.</p>
+            <div class="card-footer">
+                <span class="module-count">Modules 11-21</span>
+                <button class="card-button">Explore</button>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
-with tab4:
-    st.markdown("""
-    <div class="feature-card">
-        <h4>Advanced Analysis</h4>
-        <p>Build MACC curves, analyze co-benefits (GDP, health, PM2.5), generate country reports and narratives for stakeholders.</p>
-        <p><b>Modules:</b> 17 to 25</p>
-    </div>
-    """, unsafe_allow_html=True)
+    with tab4:
+        st.markdown("""
+        <div class="feature-card">
+            <div class="card-icon">📊</div>
+            <h4>Advanced Analysis</h4>
+            <p>Build MACC curves, analyze co-benefits (GDP, health, PM2.5), generate country reports and narratives.</p>
+            <div class="card-footer">
+                <span class="module-count">Modules 17-25</span>
+                <button class="card-button">Explore</button>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+# --- QUICKSTART ---
+quickstart = st.container()
+with quickstart:
+    st.markdown("### Getting Started")
+    with st.expander("How to use Climenro", expanded=True):
+        cols = st.columns(3)
+        steps = [
+            {"icon": "📍", "title": "Select Module", "text": "Choose from the sidebar menu"},
+            {"icon": "🌐", "title": "Choose Location", "text": "Select country or region"},
+            {"icon": "📊", "title": "Analyze & Export", "text": "Interact with tools and export insights"}
+        ]
+        
+        for i, step in enumerate(steps):
+            with cols[i]:
+                st.markdown(f"""
+                <div class="quickstart-step">
+                    <div class="step-icon">{step['icon']}</div>
+                    <h4>{step['title']}</h4>
+                    <p>{step['text']}</p>
+                </div>
+                """, unsafe_allow_html=True)
 
 # --- CLIENTS & PARTNERS ---
-st.markdown("### 🤝 Used & Supported by")
-col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    st.image("https://via.placeholder.com/120x60?text=UN", width=100)
-with col2:
-    st.image("https://via.placeholder.com/120x60?text=World+Bank", width=100)
-with col3:
-    st.image("https://via.placeholder.com/120x60?text=GIZ", width=100)
-with col4:
-    st.image("https://via.placeholder.com/120x60?text=NASA", width=100)
-with col5:
-    st.image("https://via.placeholder.com/120x60?text=EU+DG+Clima", width=100)
+partners = st.container()
+with partners:
+    st.markdown("### Trusted By Global Organizations")
+    cols = st.columns(5)
+    partners = ["UN", "World Bank", "GIZ", "NASA", "EU DG Clima"]
+    for i, partner in enumerate(partners):
+        with cols[i]:
+            st.markdown(f"""
+            <div class="partner-logo">
+                <div class="logo-placeholder">{partner}</div>
+            </div>
+            """, unsafe_allow_html=True)
 
 # --- FOOTER ---
-st.markdown("---")
-st.markdown("""
-<div class="footer">
-    <div>© 2025 Climenro – Climate Intelligence Platform. All rights reserved.</div>
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms of Service</a> |
-        <a href="#">Source Datasets</a> |
-        <a href="#">Contact Team</a>
+footer = st.container()
+with footer:
+    st.markdown("---")
+    st.markdown("""
+    <div class="footer">
+        <div class="footer-content">
+            <div>© 2025 Climenro – Climate Intelligence Platform</div>
+            <div class="footer-links">
+                <a href="#">Privacy</a> • 
+                <a href="#">Terms</a> • 
+                <a href="#">Data Sources</a> • 
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-cta">
+            Ready to transform climate policy? <button class="footer-button">Request Demo</button>
+        </div>
     </div>
-</div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
